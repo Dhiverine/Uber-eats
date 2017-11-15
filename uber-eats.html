@@ -381,6 +381,162 @@
 
 
     }
+
+    Footer {
+      display: flex;
+      width: 320px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 40px;
+      background: #262626;
+      align-content: column;
+    }
+
+    @media (min-width: 768px) {
+      Footer {
+        width: 768px;
+        align-content: row;
+      }
+      @media (min-width: 992px) {
+        Footer {
+          width: 992px;
+          align-content: row;
+
+        }
+      }
+    }
+
+    Choose {
+      width: 171px;
+      height: 40px;
+      background: #3B3B3B;
+      border-radius: 2px;
+      font-size: 13px;
+      color: #FFFFFF;
+      background: url(${arrow.svg});
+      /*no-repeat 95% 50%;*/
+      background: url(${world.svg});
+      /*no-repeat 95% 50%;*/
+    }
+
+    Top {
+      display: flex;
+      align-items: left;
+      border-top: 1px solid #FFFFFF;
+    }
+
+    LogoBox {
+      margin-bottom: 40px;
+      margin-top: 56px;
+      margin-left: 8px;
+      display: flex;
+      align-items: left;
+
+    }
+
+    Title {
+      font-size: 16px;
+      color: #FFFFFF;
+    }
+
+    Navigation {
+      box-sizing: border-box;
+      display: flex;
+      align-items: left;
+      flex-direction: column;
+      justify-content: space-between;
+      color: #FFFFFF;
+      line-height: 18px;
+      font-size: 13px;
+      width: 100%;
+    }
+
+    @media (min-width: 768px) {
+      Navigation {
+        width: 66.6667%;
+      }
+      @media (min-width: 992px) {
+        Navigation {
+          width: 66.6667%;
+
+        }
+      }
+    }
+
+    NavCol {
+      display: flex;
+      /*font-size: 13px;*/
+      flex-direction: column;
+      text-align: left;
+      /*color: #FFFFFF;*/
+      line-height: 18px;
+
+    }
+
+
+    SocialMedia {
+      display: flex;
+      flex-direction: row;
+      margin-bottom: 39px;
+      margin-top: 16px;
+    }
+
+    Facebook {
+      margin-left: 8px;
+      width: 16.4px;
+      height: 16.4px;
+      margin-right: 15px;
+    }
+
+    Instagram {
+      margin-left: 8px;
+      width: 16.4px;
+      height: 16.4px;
+      margin-right: 15px;
+    }
+
+    Twitter {
+      margin-left: 8px;
+      width: 16.4px;
+      height: 16.4px;
+      margin-right: 15px;
+    }
+
+    Upper {
+      display: flex;
+      flex-direction: column;
+      text-align: left;
+    }
+
+    Middle {
+      Border: #FFFFFF;
+      display: flex;
+      justify-content: center;
+    }
+
+    Appstore {
+      margin-right: 24px;
+      margin-top: 24px;
+    }
+
+    GooglePlay {
+      margin-right: 24px;
+      margin-top: 24px;
+    }
+
+    Bottom {
+      font-size: 11px;
+      color: #FFFFFF;
+      display: flex;
+      align-items: left;
+      justify-content: space-between
+    }
+
+    High {
+      width: 33.3333%;
+      margin-left: 82px;
+      margin-bottom: 24px;
+    }
   </style>
 </head>
 
@@ -500,6 +656,60 @@
     </Restaurants>
   </Content>
   <Footer>
+    <Upper>
+      <LogoBox>
+        <img src="white-logo.svg" alt="white logo" />
+      </LogoBox>
+      <Upper>
+        <Top>
+          <Choose name="language" id="languageSelect">
+            <option value="first">English</option>
+          </Choose>
+        </Top>
+        <Title>#UberEats</Title>
+        <SocialMedia>
+          <Facebook>
+            <img src="facebook.svg" alt="Facebook" />
+          </Facebook>
+          <Twitter>
+            <img src="twitter.svg" alt="Twitter" />
+          </Twitter>
+          <Instagram>
+            <img src="instagram.svg" alt="Instagram" />
+          </Instagram>
+        </SocialMedia>
+      </Upper>
+      <Navigation>
+        <NavCol>
+          <Link href="">About UberEats</Link>
+          <Link href="">Become a Delivery Partner</Link>
+          <Link href="">Become a Restaurant Partner</Link>
+          <Link href="">See all cities</Link>
+          <Link href="">Pricing</Link>
+          <Link href="">Help</Link>
+          <Link href="">FAQs</Link>
+        </NavCol>
+      </Navigation>
+      <Middle>
+        <Appstore>
+          <img src="appstore.png" alt="AppStore" />
+        </Appstore>
+        <GooglePlay>
+          <img src="googleplay.png" alt="GooglePlay" />
+        </GooglePlay>
+      </Middle>
+      <Bottom>
+        <Navigation>
+          <NavCol>
+            <Link href="">© 2017 Uber Technologies Inc.</Link>
+            <Link href="">Privacy</Link>
+            <Link href="">Terms</Link>
+          </NavCol>
+        </Navigation>
+        <High>
+          <img src="btn-up.png" alt="Up" />
+        </High>
+      </Bottom>
   </Footer>
 </body>
 <html>
