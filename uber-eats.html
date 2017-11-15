@@ -1,0 +1,505 @@
+<!doctype html>
+<html>
+
+
+
+
+
+<head>
+  <title>Uber Eats</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css?family=Roboto');
+
+    .row {
+      display: flex;
+
+    }
+
+    .col-1,
+    .col-2,
+    .col-3,
+    .col-12 {
+      padding-left: 8px;
+      padding-right: 8px;
+      box-sizing: border-box;
+    }
+
+
+    .col-1 {
+      flex-basis: 8.3333%;
+
+    }
+
+    .col-2 {
+      flex-basis: 16.6667%;
+
+    }
+
+    .col-3 {
+      flex-basis: 24.9999%;
+
+    }
+
+    .col-4 {
+      flex-basis: 33.3333%;
+    }
+
+    .col-5 {
+      flex-basis: 41.6666%;
+    }
+
+    .col-6 {
+      flex-basis: 50%;
+    }
+
+    .col-7 {
+      flex-basis: 58.4795%;
+    }
+
+    .col-8 {
+      flex-basis: 66.6667%;
+    }
+
+    .col-9 {
+      flex-basis: 76.9231%;
+    }
+
+    .col-10 {
+      flex-basis: 83.3333%;
+    }
+
+    .col-11 {
+      flex-basis: 91.7431%;
+    }
+
+    .col-12 {
+      flex-basis: 100%;
+    }
+
+    body {
+
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      font-family: 'Roboto-regular', sans-serif;
+      width: 320px;
+      align-content: center;
+      margin-left: auto;
+      margin-right: auto;
+      justify-content: space-between;
+      box-sizing: border-box;
+
+    }
+
+    @media (min-width: 768px) {
+      body {
+        width: 768px;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-between;
+
+      }
+      @media (min-width: 992px) {
+        body {
+          width: 992px;
+          display: flex;
+          justify-content: space-between;
+          flex-direction: column;
+        }
+      }
+    }
+
+    content {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      width: 100%;
+      align-content: left;
+
+
+    }
+
+    @media (min-width: 768px) {
+      content {
+        width: 752px;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-between;
+
+      }
+      @media (min-width: 992px) {
+        content {
+          width: 962xp;
+          display: flex;
+          justify-content: space-between;
+          flex-wrap: wrap;
+          flex-direction: row;
+        }
+      }
+    }
+
+    header {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      width: 320px;
+      height: 72px;
+      margin-left: auto;
+      background: #FFFFFF;
+      box-shadow: 0px 0px 16px rgba(38, 38, 38, 0.16);
+
+    }
+
+    @media (min-width: 768px) {
+      header {
+        width: 768px;
+      }
+      @media (min-width: 992px) {
+        header {
+          width: 992px;
+        }
+      }
+    }
+
+    Logo {
+      margin-left: 16px;
+    }
+
+    Buttons {
+      display: flex;
+      flex-direction: row;
+      flex-basis: 50%;
+
+    }
+
+    @media (min-width: 768px) {
+      Buttons {
+        flex-basis: 33.3333%;
+      }
+      @media (min-width: 992px) {
+        Buttons {
+          flex-basis: 25%;
+        }
+      }
+    }
+
+    button1 {
+      width: 72px;
+      height: 40px;
+      border: 1px solid #E0E0E0;
+      border-radius: 2px;
+      background-color: white;
+      font-size: 11px;
+      color: #1D1D1D;
+      display: flex;
+      align-items: center;
+      /*margin-top: 16px;
+      margin-bottom: 16px;
+      margin-left: 8px;
+      margin-right: 8px;*/
+      text-align: center;
+      display: inline-block;
+      margin-left: 8px;
+
+
+
+
+    }
+
+    button2 {
+      width: 72px;
+      height: 40px;
+      border: 1px solid #E0E0E0;
+      border-radius: 2px;
+      background-color: #1D1D1D;
+      font-size: 11px;
+      color: #E0E0E0;
+      display: flex;
+      align-items: center;
+      /*margin-top: 16px;
+      margin-bottom: 16px;
+      margin-left: 8px;
+      margin-right: 8px;*/
+      text-align: center;
+      display: inline-block;
+      margin-left: 8px;
+      margin-right: 8px;
+
+
+
+
+    }
+
+    search {
+      width: 304px;
+      height: 48px;
+      margin-top: 32px;
+      margin-bottom: 24px;
+      display: flex;
+      align-items: left;
+      border-bottom: 1px solid #757575;
+
+
+    }
+
+    Input {
+      width: 962px;
+      height: 24px;
+      margin-left: 13px;
+      line-height: 24px;
+      font-size: 13px;
+      border: none;
+      color: #626262;
+    }
+
+    @media (min-width: 768px) {
+      search {
+        width: 752px;
+        margin-top: 32px;
+        margin-bottom: 56px;
+      }
+      @media (min-width: 992px) {
+        search {
+          width: 962px;
+          margin-top: 32px;
+          margin-bottom: 56px;
+        }
+      }
+    }
+
+
+    WhenTo {
+      display: flex;
+      font-size: 11px;
+      color: #626262;
+      align-items: left;
+      justify-content: space-between;
+      flex-direction: row;
+      flex-wrap: wrap;
+
+
+    }
+
+    Left {
+      display: flex;
+      flex-direction: column;
+
+    }
+
+    Right {
+      display: flex;
+      flex-direction: column;
+
+    }
+
+    Select {
+      height: 40px;
+      border: 1px solid #E0E0E0;
+      box-sizing: border-box;
+      border-radius: 2px;
+      line-height: 24px;
+      font-size: 13px;
+      margin-top: 8px;
+      color: #1D1D1D;
+    }
+
+    h1 {
+      line-height: 34px;
+      font-size: 22px;
+      margin-bottom: 14px;
+      margin-top: 40px;
+    }
+
+    Restaurants {
+      width: 305px;
+      display: flex;
+      flex-direction: column;
+      margin-right: 2px;
+      margin-bottom: 20px;
+
+
+    }
+
+    @media (min-width: 768px) {
+      Restaurants {
+        flex-basis: 50%;
+        width: 367.95px;
+
+      }
+    }
+
+    @media (min-width: 992px) {
+      Restaurants {
+        flex-basis: 33.3333%;
+        width: 320px;
+      }
+    }
+
+    Describtion {
+      font-style: normal;
+      font-weight: normal;
+      line-height: 21px;
+      font-size: 13px;
+      color: #1D1D1D;
+      display: flex;
+      align-items: left;
+      flex-direction: column;
+      margin-top: 16px;
+
+
+    }
+
+    Name {
+      font-style: normal;
+      font-weight: normal;
+      line-height: 24px;
+      font-size: 16px;
+      color: #1D1D1D;
+      margin-bottom: 4px;
+    }
+
+    Cousine {
+      font-style: normal;
+      font-weight: normal;
+      line-height: 21px;
+      font-size: 14px;
+      color: #626262;
+      margin-bottom: 4px;
+
+    }
+
+    Time {
+      font-style: normal;
+      font-weight: normal;
+      line-height: 21px;
+      font-size: 13px;
+      color: #1D1D1D;
+      margin-bottom: 20px;
+
+
+    }
+  </style>
+</head>
+
+
+<body>
+  <header>
+    <Logo>
+      <img src="Logo.svg" alt="logo" />
+    </Logo>
+    <Buttons>
+      <button1>
+        <span>Sign In</span>
+      </button1>
+      <button2>
+        <span>Register</span>
+      </button2>
+    </Buttons>
+  </header>
+  <search>
+    <img src="Search.svg" alt="Search" />
+    <Input placeholder="Search for restaurant or cuisine" />
+  </search>
+
+  <WhenTo>
+    <Left>
+      <span>When</span>
+      <Select name="When" id="Time">
+        <option value="first">ASAP</option>
+    </Left>
+    </Select>
+    <Right>
+      <span>To</span>
+      <Select name="Where" id="Where">
+        <option value="first">
+          <img src="location.svg" alt="Locstion">ul. Bolshaya Dmitrovka,22</option>
+      </Select>
+    </Right>
+
+  </WhenTo>
+  <h1>Moscow Restaurants
+  </h1>
+  <Content>
+
+    <Restaurants>
+      <img src="macdonalds.png" alt="Макдоналдс" />
+      <Describtion>
+        <Name>Макдоналдс — Газетный</Name>
+        <Cousine>₽₽ • Бургеры</Cousine>
+        <Time>25 - 35 Min</Time>
+      </Describtion>
+    </Restaurants>
+
+    <Restaurants>
+      <img src="dimsum.png" alt="DimSum $ Co" />
+      <Describtion>
+        <Name>DimSum & Co — ЦДМ</Name>
+        <Cousine>₽ • Японская • Китайская • Азиатская</Cousine>
+        <Time>40 - 50 Min</Time>
+      </Describtion>
+    </Restaurants>
+
+    <Restaurants>
+      <img src="dvizhok.png" alt="Движок" />
+      <Describtion>
+        <Name>ДвижОК — Манежная</Name>
+        <Cousine>₽ • Американская • Европейская</Cousine>
+        <Time>35 - 45 Min</Time>
+      </Describtion>
+    </Restaurants>
+    <Restaurants>
+      <img src="nha.png" alt="НЯ-NHA" />
+      <Describtion>
+        <Name>НЯ — NHA</Name>
+        <Cousine>₽₽ • Вьетнамская</Cousine>
+        <Time>30 - 40 Min</Time>
+      </Describtion>
+    </Restaurants>
+    <Restaurants>
+      <img src="dzi.png" alt="НЯ-NHA" />
+      <Describtion>
+        <Name>Точка Дзы — Цветной</Name>
+        <Cousine>₽₽ • Вьетнамская</Cousine>
+        <Time>40 - 50 Min</Time>
+      </Describtion>
+    </Restaurants>
+    <Restaurants>
+      <img src="cinnabon.png" alt="Cinnabon" />
+      <Describtion>
+        <Name>Cinnabon</Name>
+        <Cousine>₽ • Выпечка • Десерты • Капкейки</Cousine>
+        <Time>25 - 35 Min</Time>
+      </Describtion>
+    </Restaurants>
+    <Restaurants>
+      <img src="pizzelove.png" alt="Pizzelove" />
+      <Describtion>
+        <Name>Pizzelove</Name>
+        <Cousine>₽₽ • Пицца</Cousine>
+        <Time>15 - 25 Min</Time>
+      </Describtion>
+    </Restaurants>
+    <Restaurants>
+      <img src="zu.png" alt="Zю" />
+      <Describtion>
+        <Name>Zю кафе — Тверская</Name>
+        <Cousine>₽₽ • Японская</Cousine>
+        <Time>25 - 35 Min</Time>
+      </Describtion>
+    </Restaurants>
+    <Restaurants>
+      <img src="bq.png" alt="Bar BQ" />
+      <Describtion>
+        <Name>Bar BQ Cafe — Манежная</Name>
+        <Cousine>₽₽₽ • Европейская</Cousine>
+        <Time>30 - 40 Min</Time>
+      </Describtion>
+    </Restaurants>
+  </Content>
+  <Footer>
+  </Footer>
+</body>
+<html>
