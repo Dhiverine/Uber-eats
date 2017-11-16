@@ -122,7 +122,6 @@
 
     @media (min-width: 768px) {
       content {
-        width: 752px;
         display: flex;
         flex-wrap: wrap;
         flex-direction: row;
@@ -131,7 +130,6 @@
       }
       @media (min-width: 992px) {
         content {
-          width: 962xp;
           display: flex;
           justify-content: space-between;
           flex-wrap: wrap;
@@ -164,29 +162,30 @@
       }
     }
 
-    Logo {
+    .logo {
       margin-left: 16px;
     }
 
-    Buttons {
+    .buttons {
       display: flex;
       flex-direction: row;
       flex-basis: 50%;
-
+      justify-content: center;
+      vertical-align: middle;
     }
 
     @media (min-width: 768px) {
-      Buttons {
+      .buttons {
         flex-basis: 33.3333%;
       }
       @media (min-width: 992px) {
-        Buttons {
+        .buttons {
           flex-basis: 25%;
         }
       }
     }
 
-    button1 {
+    .signin {
       width: 72px;
       height: 40px;
       border: 1px solid #E0E0E0;
@@ -196,12 +195,12 @@
       color: #1D1D1D;
       display: flex;
       align-items: center;
+      justify-content: center;
       /*margin-top: 16px;
       margin-bottom: 16px;
       margin-left: 8px;
       margin-right: 8px;*/
       text-align: center;
-      display: inline-block;
       margin-left: 8px;
 
 
@@ -209,7 +208,7 @@
 
     }
 
-    button2 {
+    .register {
       width: 72px;
       height: 40px;
       border: 1px solid #E0E0E0;
@@ -219,12 +218,12 @@
       color: #E0E0E0;
       display: flex;
       align-items: center;
+      justify-content: center;
       /*margin-top: 16px;
       margin-bottom: 16px;
       margin-left: 8px;
       margin-right: 8px;*/
       text-align: center;
-      display: inline-block;
       margin-left: 8px;
       margin-right: 8px;
 
@@ -245,65 +244,38 @@
 
     }
 
-    Input {
+    input {
       width: 962px;
       height: 24px;
-      margin-left: 13px;
       line-height: 24px;
       font-size: 13px;
       border: none;
       color: #626262;
+
+
     }
 
     @media (min-width: 768px) {
       search {
-        width: 752px;
+        width: 100%;
         margin-top: 32px;
         margin-bottom: 56px;
       }
-      @media (min-width: 992px) {
-        search {
-          width: 962px;
-          margin-top: 32px;
-          margin-bottom: 56px;
-        }
-      }
     }
 
 
-    WhenTo {
-      display: flex;
-      font-size: 11px;
-      color: #626262;
-      align-items: left;
-      justify-content: space-between;
-      flex-direction: row;
-      flex-wrap: wrap;
-
-
-    }
-
-    Left {
-      display: flex;
-      flex-direction: column;
-
-    }
-
-    Right {
-      display: flex;
-      flex-direction: column;
-
-    }
-
-    Select {
-      height: 40px;
-      border: 1px solid #E0E0E0;
-      box-sizing: border-box;
-      border-radius: 2px;
-      line-height: 24px;
-      font-size: 13px;
+    .cart {
+      margin-right: 8px;
+      margin-left: 8px;
       margin-top: 8px;
-      color: #1D1D1D;
+      display: none;
+    }
+
+    @media (min-width: 768px) {
+      cart {
+        display: inline;
+
+      }
     }
 
     h1 {
@@ -313,7 +285,7 @@
       margin-top: 40px;
     }
 
-    Restaurants {
+    .restaurants {
       width: 305px;
       display: flex;
       flex-direction: column;
@@ -324,7 +296,7 @@
     }
 
     @media (min-width: 768px) {
-      Restaurants {
+      .restaurants {
         flex-basis: 50%;
         width: 367.95px;
 
@@ -332,13 +304,13 @@
     }
 
     @media (min-width: 992px) {
-      Restaurants {
-        flex-basis: 33.3333%;
+      .restaurants {
+        flex-basis: 32%;
         width: 320px;
       }
     }
 
-    Describtion {
+    .describtion {
       font-style: normal;
       font-weight: normal;
       line-height: 21px;
@@ -352,7 +324,7 @@
 
     }
 
-    Name {
+    .name {
       font-style: normal;
       font-weight: normal;
       line-height: 24px;
@@ -361,7 +333,7 @@
       margin-bottom: 4px;
     }
 
-    Cousine {
+    .cousine {
       font-style: normal;
       font-weight: normal;
       line-height: 21px;
@@ -371,7 +343,7 @@
 
     }
 
-    Time {
+    .time {
       font-style: normal;
       font-weight: normal;
       line-height: 21px;
@@ -382,31 +354,29 @@
 
     }
 
-    Footer {
+    footer {
+      /* for arrow */
+      position: relative;
+
       display: flex;
       width: 320px;
-      margin-left: auto;
-      margin-right: auto;
+      /*margin-left: auto;
+      margin-right: auto;*/
       margin-top: 40px;
       background: #262626;
-      align-content: column;
+      align-content: row;
+      flex-wrap: wrap;
+
     }
 
     @media (min-width: 768px) {
-      Footer {
-        width: 768px;
-        align-content: row;
-      }
-      @media (min-width: 992px) {
-        Footer {
-          width: 992px;
-          align-content: row;
-
-        }
+      footer {
+        width: 100%;
+        align-content: column;
       }
     }
 
-    Choose {
+    choose {
       width: 171px;
       height: 40px;
       background: #3B3B3B;
@@ -419,112 +389,222 @@
       /*no-repeat 95% 50%;*/
     }
 
-    Top {
-      display: flex;
-      align-items: left;
-      border-top: 1px solid #FFFFFF;
+    @media (min-width: 768px) {
+      .block .column:first-child {
+        width: 50%;
+      }
     }
 
-    LogoBox {
+    .logobox {
       margin-bottom: 40px;
       margin-top: 56px;
-      margin-left: 8px;
+      margin-left: 16px;
       display: flex;
       align-items: left;
+      width: 33%;
 
     }
 
-    Title {
-      font-size: 16px;
-      color: #FFFFFF;
-    }
-
-    Navigation {
-      box-sizing: border-box;
+    .first {
+      border-bottom: 1px solid #757575;
       display: flex;
-      align-items: left;
-      flex-direction: column;
-      justify-content: space-between;
-      color: #FFFFFF;
-      line-height: 18px;
-      font-size: 13px;
       width: 100%;
+
     }
 
     @media (min-width: 768px) {
-      Navigation {
-        width: 66.6667%;
+      .logobox {
+        width: 100%;
       }
       @media (min-width: 992px) {
-        Navigation {
-          width: 66.6667%;
-
+        .logobox {
+          width: 100%;
         }
       }
     }
 
-    NavCol {
+    .title {
+      font-size: 16px;
+      color: #FFFFFF;
+    }
+
+    nav {
+      font-size: 13px;
+      line-height: 18px;
+      align-items: left;
       display: flex;
-      /*font-size: 13px;*/
+      box-sizing: border-box;
+      color: #FFFFFF;
+      line-height: 18px;
+      flex-direction: column;
+      flex: wrap;
+      =padding-bottom: 16px;
+    }
+
+    @media (min-width: 768px) {
+      nav {
+        width: 66.6667%;
+        flex-direction: row;
+        padding-bottom: 0px;
+
+      }
+    }
+
+    .column {
+      display: flex;
       flex-direction: column;
       text-align: left;
-      /*color: #FFFFFF;*/
+    }
+
+    .block .column {
+      margin-top: 10px;
+      line-height: 30px;
+    }
+
+    @media (min-width: 768px) {
+      .column {
+        width: 32%;
+        margin-right: 86px;
+      }
+    }
+
+    .down {
+      display: flex;
+      flex-direction: column;
+      text-align: left;
+    }
+
+    @media (min-width: 768px) {
+      .down {
+        width: 100%;
+        margin-right: 86px;
+        flex-direction: row;
+        margin-top: 16px;
+
+
+      }
+    }
+
+    nav div.down {
+      font-size: 13px;
+      color: #FFFFFF;
+      line-height: 24px;
+      margin-right: 50px;
+    }
+
+    @media (min-width: 768px) {
+      .nav div.down {
+        width: 100%;
+        margin-right: 86px;
+        flex-direction: column;
+        margin-top: 16px;
+
+
+      }
+    }
+
+    nav class.column {
+      font-size: 13px;
+      color: #FFFFFF;
+      line-height: 46px;
+      margin-right: 50px;
+    }
+
+    @media (min-width: 768px) {
+      .nav class.column {
+        width: 33%;
+        margin-right: 86px;
+        flex-direction: column;
+        margin-top: 16px;
+
+
+      }
+    }
+
+    footer .column {
+      font-size: 13px;
+      color: #FFFFFF;
       line-height: 18px;
+      margin-top: 16px;
+      margin-bottom: 16px;
+    }
+
+    footer .column a {
+      font-size: 13px;
+      color: #FFFFFF;
+      line-height: 18px;
+      margin-top: 16px;
 
     }
 
-
-    SocialMedia {
+    .socialmedia {
       display: flex;
       flex-direction: row;
       margin-bottom: 39px;
       margin-top: 16px;
     }
 
-    Facebook {
+    .facebook {
       margin-left: 8px;
       width: 16.4px;
       height: 16.4px;
       margin-right: 15px;
     }
 
-    Instagram {
+    .instagram {
       margin-left: 8px;
       width: 16.4px;
       height: 16.4px;
       margin-right: 15px;
     }
 
-    Twitter {
+    .twitter {
       margin-left: 8px;
       width: 16.4px;
       height: 16.4px;
       margin-right: 15px;
     }
 
-    Upper {
+    .upper {
       display: flex;
       flex-direction: column;
       text-align: left;
+      width: 320px;
     }
 
-    Middle {
-      Border: #FFFFFF;
+    @media (min-width: 768px) {
+      .upper {
+        width: 100%;
+      }
+    }
+
+    .middle {
       display: flex;
       justify-content: center;
+      margin-top: 30px;
+      margin-bottom: 30px;
+      width: 340px;
+
     }
 
-    Appstore {
+    .third {
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+      border: 1px solid #626262;
+    }
+
+    .appstore {
       margin-right: 24px;
       margin-top: 24px;
     }
 
-    GooglePlay {
+    .googleplay {
       margin-right: 24px;
       margin-top: 24px;
     }
 
-    Bottom {
+    .bottom {
       font-size: 11px;
       color: #FFFFFF;
       display: flex;
@@ -532,10 +612,163 @@
       justify-content: space-between
     }
 
-    High {
+    .high {
       width: 33.3333%;
       margin-left: 82px;
       margin-bottom: 24px;
+    }
+
+    .whento {
+      display: flex;
+      font-size: 11px;
+      color: #626262;
+      align-items: left;
+    }
+
+    @media (min-width: 768px) {
+      .whento {
+        display: none;
+      }
+    }
+
+    .whentoheader {
+      display: none;
+      font-size: 11px;
+      color: #626262;
+      align-items: left;
+    }
+
+    @media (min-width: 768px) {
+      .whentoheader {
+        display: flex;
+        font-size: 11px;
+        color: #626262;
+        align-items: left;
+      }
+    }
+
+
+    .left {
+      display: flex;
+      flex-direction: column;
+
+    }
+
+    .leftinheader {
+      display: flex;
+      flex-direction: column;
+      margin-right: 8px;
+
+    }
+
+    .right {
+      display: flex;
+      flex-direction: column;
+      margin-left: 8px;
+
+    }
+
+    .labelheader {
+      display: flex;
+      flex-direction: row;
+      margin-left: 8px;
+      margin-right: 86px;
+
+    }
+
+    .when {
+      width: 64px;
+      height: 40px;
+      border: 1px solid #E0E0E0;
+      box-sizing: border-box;
+      border-radius: 2px;
+      line-height: 24px;
+      font-size: 13px;
+      padding-left: 16px;
+
+      color: #1D1D1D;
+
+    }
+
+    .place {
+      background: url("location.svg") no-repeat;
+      background-position: 8px 10px;
+      width: 224px;
+      height: 40px;
+      border: 1px solid #E0E0E0;
+      box-sizing: border-box;
+      border-radius: 2px;
+      line-height: 24px;
+      font-size: 13px;
+      color: #1D1D1D;
+      padding-left: 36px;
+
+    }
+
+    .placeinheader {
+      background: url("location.svg") no-repeat;
+      background-position: 8px 10px;
+      width: 224px;
+      height: 40px;
+      border: 1px solid #E0E0E0;
+      box-sizing: border-box;
+      border-radius: 2px;
+      line-height: 24px;
+      font-size: 13px;
+      color: #1D1D1D;
+      padding-left: 36px;
+      margin-left: 8px;
+
+    }
+
+    label {
+      font-size: 11px;
+      color: #626262;
+      margin-bottom: 8px;
+    }
+
+    .language {
+      background: url("world.svg"), url("arrow.svg");
+      background-repeat: no-repeat, no-repeat;
+      background-position: 15px 14px, 170px 20px;
+      width: 176px;
+      height: 40px;
+      margin-top: 16px;
+      background-color: #3B3B3B;
+      border-radius: 2px;
+      align-content: space-between;
+      padding-left: 30px;
+
+    }
+
+    /*footer .second .top input {
+      background: url("arrow.svg") no-repeat;
+    }*/
+
+    .ubereats {
+      font-size: 16px;
+      color: #FFFFFF;
+      margin-top: 30px;
+    }
+
+    .block {
+      margin-left: 16px;
+
+    }
+
+    @media (min-width: 768px) {
+      .block {
+        margin-right: 40px;
+        margin-right: 40px;
+        width: 100%;
+        display: flex
+      }
+    }
+
+    footer .arrow-top {
+      position: absolute;
+      bottom: 5%;
+      right: 5%;
     }
   </style>
 </head>
@@ -543,173 +776,194 @@
 
 <body>
   <header>
-    <Logo>
+    <div class="logo">
       <img src="Logo.svg" alt="logo" />
-    </Logo>
-    <Buttons>
-      <button1>
+    </div>
+    </div>
+    <div class="whentoheader">
+      <div class="leftinheader">
+        <input class="when" id="when" type="text" placeholder="ASAP" />
+      </div>
+      <div class="labelstreet">
+        <label>To </label>
+        <input class="placeinheader" id="place" type="text" placeholder="ul. Bolshaya Dmitrovka, 22" />
+      </div>
+    </div>
+    <div class="buttons">
+      <button class="signin">
         <span>Sign In</span>
-      </button1>
-      <button2>
+      </button class="signin">
+      <button class="register">
         <span>Register</span>
-      </button2>
-    </Buttons>
+      </button class="register">
+      <div class="cart">
+        <img src="basket.svg" alt="cart" />
+      </div>
+    </div>
+
+
   </header>
   <search>
     <img src="Search.svg" alt="Search" />
-    <Input placeholder="Search for restaurant or cuisine" />
+    <input placeholder="Search for restaurant or cuisine" />
   </search>
 
-  <WhenTo>
-    <Left>
-      <span>When</span>
-      <Select name="When" id="Time">
-        <option value="first">ASAP</option>
-    </Left>
-    </Select>
-    <Right>
-      <span>To</span>
-      <Select name="Where" id="Where">
-        <option value="first">
-          <img src="location.svg" alt="Locstion">ul. Bolshaya Dmitrovka,22</option>
-      </Select>
-    </Right>
+  <div class="whento">
+    <div class="left">
+      <label for="when">When</label>
+      <input class="when" id="when" type="text" placeholder="ASAP" />
+    </div>
+    <div class="right">
+      <label>To</label>
+      <input class="place" id="place" type="text" placeholder="ul. Bolshaya Dmitrovka, 22" />
+    </div>
+  </div>
 
-  </WhenTo>
   <h1>Moscow Restaurants
   </h1>
   <Content>
 
-    <Restaurants>
+    <div class="restaurants">
       <img src="macdonalds.png" alt="Макдоналдс" />
-      <Describtion>
-        <Name>Макдоналдс — Газетный</Name>
-        <Cousine>₽₽ • Бургеры</Cousine>
-        <Time>25 - 35 Min</Time>
-      </Describtion>
-    </Restaurants>
+      <div class="describtion">
+        <div class="name">Макдоналдс — Газетный</div>
+        <div class="cousine">₽₽ • Бургеры</div>
+        <div class="time">25 - 35 Min</div>
+      </div>
+    </div>
 
-    <Restaurants>
+    <div class="restaurants">
       <img src="dimsum.png" alt="DimSum $ Co" />
-      <Describtion>
-        <Name>DimSum & Co — ЦДМ</Name>
-        <Cousine>₽ • Японская • Китайская • Азиатская</Cousine>
-        <Time>40 - 50 Min</Time>
-      </Describtion>
-    </Restaurants>
-
-    <Restaurants>
+      <div class="describtion">
+        <div class="name">DimSum & Co — ЦДМ</div>
+        <div class="cousine">₽ • Японская • Китайская • Азиатская</div>
+        <div class="time">40 - 50 Min</div>
+      </div>
+    </div>
+    <div class="restaurants">
       <img src="dvizhok.png" alt="Движок" />
-      <Describtion>
-        <Name>ДвижОК — Манежная</Name>
-        <Cousine>₽ • Американская • Европейская</Cousine>
-        <Time>35 - 45 Min</Time>
-      </Describtion>
-    </Restaurants>
-    <Restaurants>
+      <div class="describtion">
+        <div class="name">ДвижОК — Манежная</div>
+        <div class="cousine">₽ • Американская • Европейская</div>
+        <div class="time">35 - 45 Min</div>
+      </div>
+    </div>
+    <div class="restaurants">
       <img src="nha.png" alt="НЯ-NHA" />
-      <Describtion>
-        <Name>НЯ — NHA</Name>
-        <Cousine>₽₽ • Вьетнамская</Cousine>
-        <Time>30 - 40 Min</Time>
-      </Describtion>
-    </Restaurants>
-    <Restaurants>
+      <div class="describtion">
+        <div class="name">НЯ — NHA</div>
+        <div class="cousine">₽₽ • Вьетнамская</div>
+        <div class="time">30 - 40 Min</div>
+      </div>
+    </div>
+    <div class="restaurants">
       <img src="dzi.png" alt="НЯ-NHA" />
-      <Describtion>
-        <Name>Точка Дзы — Цветной</Name>
-        <Cousine>₽₽ • Вьетнамская</Cousine>
-        <Time>40 - 50 Min</Time>
-      </Describtion>
-    </Restaurants>
-    <Restaurants>
+      <div class="describtion">
+        <div class="name">Точка Дзы — Цветной</div>
+        <div class="cousine">₽₽ • Вьетнамская</div>
+        <div class="time">40 - 50 Min</div>
+      </div>
+    </div>
+    <div class="restaurants">
       <img src="cinnabon.png" alt="Cinnabon" />
-      <Describtion>
-        <Name>Cinnabon</Name>
-        <Cousine>₽ • Выпечка • Десерты • Капкейки</Cousine>
-        <Time>25 - 35 Min</Time>
-      </Describtion>
-    </Restaurants>
-    <Restaurants>
+      <div class="describtion">
+        <div class="name">Cinnabon</div>
+        <div class="cousine">₽ • Выпечка • Десерты • Капкейки</div>
+        <div class="time">25 - 35 Min</div>
+      </div>
+    </div>
+    <div class="restaurants">
       <img src="pizzelove.png" alt="Pizzelove" />
-      <Describtion>
-        <Name>Pizzelove</Name>
-        <Cousine>₽₽ • Пицца</Cousine>
-        <Time>15 - 25 Min</Time>
-      </Describtion>
-    </Restaurants>
-    <Restaurants>
+      <div class="describtion">
+        <div class="name">Pizzelove</div>
+        <div class="cousine">₽₽ • Пицца</div>
+        <div class="time">15 - 25 Min</div>
+      </div>
+    </div>
+    <div class="restaurants">
       <img src="zu.png" alt="Zю" />
-      <Describtion>
-        <Name>Zю кафе — Тверская</Name>
-        <Cousine>₽₽ • Японская</Cousine>
-        <Time>25 - 35 Min</Time>
-      </Describtion>
-    </Restaurants>
-    <Restaurants>
+      <div class="describtion">
+        <div class="name">ю кафе — Тверская</div>
+        <div class="cousine">₽₽ • Японская</div>
+        <div class="time">25 - 35 Min</div>
+      </div>
+    </div>
+    <div class="restaurants">
       <img src="bq.png" alt="Bar BQ" />
-      <Describtion>
-        <Name>Bar BQ Cafe — Манежная</Name>
-        <Cousine>₽₽₽ • Европейская</Cousine>
-        <Time>30 - 40 Min</Time>
-      </Describtion>
-    </Restaurants>
+      <div class="describtion">
+        <div class="name">Bar BQ Cafe — Манежная</div>
+        <div class="cousine">₽₽₽ • Европейская</div>
+        <div class="time">30 - 40 Min</div>
+      </div>
+    </div>
   </Content>
-  <Footer>
-    <Upper>
-      <LogoBox>
-        <img src="white-logo.svg" alt="white logo" />
-      </LogoBox>
-      <Upper>
-        <Top>
-          <Choose name="language" id="languageSelect">
-            <option value="first">English</option>
-          </Choose>
-        </Top>
-        <Title>#UberEats</Title>
-        <SocialMedia>
-          <Facebook>
+
+  <footer>
+    <div class="upper">
+      <div class="first">
+        <div class="logobox">
+          <img src="white-logo.svg" alt="white logo" />
+        </div>
+      </div>
+    </div>
+    <div class="block">
+      <div class="column">
+        <input class="language" id="language" type="text" placeholder="ENGLISH" />
+        <span class="ubereats">#UberEats
+        </span>
+        <div class="column socialmedia">
+          <div class="facebook">
             <img src="facebook.svg" alt="Facebook" />
-          </Facebook>
-          <Twitter>
+          </div>
+          <div class="twitter">
             <img src="twitter.svg" alt="Twitter" />
-          </Twitter>
-          <Instagram>
+          </div>
+          <div class="instagram">
             <img src="instagram.svg" alt="Instagram" />
-          </Instagram>
-        </SocialMedia>
-      </Upper>
-      <Navigation>
-        <NavCol>
-          <Link href="">About UberEats</Link>
-          <Link href="">Become a Delivery Partner</Link>
-          <Link href="">Become a Restaurant Partner</Link>
-          <Link href="">See all cities</Link>
-          <Link href="">Pricing</Link>
-          <Link href="">Help</Link>
-          <Link href="">FAQs</Link>
-        </NavCol>
-      </Navigation>
-      <Middle>
-        <Appstore>
+          </div>
+        </div>
+      </div>
+
+      <nav class="column">
+        <a>About UberEats</a>
+        <a>Become a Delivery Partner</a>
+        <a>Become a Restaurant Partner</a>
+      </nav>
+      <nav class="column">
+        <a>See all cities</a>
+        <a>Pricing</a>
+        <a>Help</a>
+        <a>FAQs</a>
+      </nav>
+    </div>
+
+    </div>
+    <div class="third">
+      <div class="middle">
+        <div class="appstore">
           <img src="appstore.png" alt="AppStore" />
-        </Appstore>
-        <GooglePlay>
+        </div>
+        <div class="googleplay">
           <img src="googleplay.png" alt="GooglePlay" />
-        </GooglePlay>
-      </Middle>
-      <Bottom>
-        <Navigation>
-          <NavCol>
-            <Link href="">© 2017 Uber Technologies Inc.</Link>
-            <Link href="">Privacy</Link>
-            <Link href="">Terms</Link>
-          </NavCol>
-        </Navigation>
-        <High>
-          <img src="btn-up.png" alt="Up" />
-        </High>
-      </Bottom>
-  </Footer>
+        </div>
+      </div>
+    </div>
+    </div>
+    <div class="block">
+      <div class="column">
+        <a>© 2017 Uber Technologies Inc.</a>
+      </div>
+      <nav class="column">
+        <a>Privacy</a>
+      </nav>
+      <nav class="column">
+        <a>Terms</a>
+      </nav>
+    </div>
+    </div>
+    <div class="arrow-top">
+      <img src="btn-up.png" alt="upbtn" />
+    </div>
+  </footer>
 </body>
 <html>
